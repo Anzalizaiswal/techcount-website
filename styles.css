@@ -99,7 +99,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(images/cubes.jpg) no-repeat center/cover;
+    background: url(/images/cubes.jpg) no-repeat center/cover;
     opacity: 0.5; /* Adjust transparency (0.1 to 1) */
     z-index: -1; /* Keeps it behind content */
 }
@@ -622,79 +622,66 @@ header {
     }
 }
 
-/* about.css */
-.aboutt-section {
-    width: 100vw;
-    min-height: 100vh;
-    padding: 80px 8%;
+
+/* aboutt Grid Section */
+.aboutt-grid-side {
+    padding: 80px 10% 60px; /* Adjust padding as needed */
+}
+
+.aboutt-row {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
+    margin-bottom: 100px; /* Spacing between service rows */
 }
 
-.aboutt-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 80px;
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
+.aboutt-row.reverse {
+    flex-direction: row-reverse; /* Image on the left for reversed rows */
 }
 
-.aboutt-content {
-    flex: 1;
-    font-family: 'Poppins', sans-serif;
+.aboutt-img {
+    flex: 1; /* Take equal width */
+    margin-right: 50px; /* Adjust for the gap */
+    border-radius: 10px; /* Optional: Rounded corners for images */
+    overflow: hidden; /* Clip any overflowing content (for border-radius) */
 }
 
-.aboutt-heading {
-    font-size: 3.2rem;
-    color: #0A3476;
-    margin-bottom: 25px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.aboutt-heading::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 60px;
-    height: 3px;
-    background-color: #4CAF50;
+.aboutt-row.reverse .aboutt-img {
+    margin-left: 50px; /* Adjust for the gap */
+    margin-right: 0;
 }
 
 .aboutt-text {
-    color: #333;
-    font-size: 1.15rem;
-    line-height: 1.8;
+    flex: 1; /* Take equal width */
+}
+
+.aboutt-text h2 {
+    font-size: 2.5rem;
+    color: #0A3476; /* Your theme blue */
+    margin-bottom: 18px;
+   
+}
+
+.aboutt-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
     text-align: justify;
 }
 
-.aboutt-image {
-    flex: 1;
-    text-align: center;
-}
-
-.aboutt-image img {
+.aboutt-img img {
+    display: block;
     width: 100%;
-    max-width: 600px;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Optional: Image hover effect */
 }
 
-.aboutt-image img:hover {
-    transform: scale(1.03);
+.aboutt-img img:hover {
+    transform: scale(1.05);
 }
 
-.aboutt-container:nth-child(even) {
-    flex-direction: row-reverse;
+/* Add margin to the last aboutt-row */
+.aboutt-grid-side .aboutt-row:last-child {
+    margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {
@@ -722,7 +709,7 @@ header {
     position: relative;
     width: 100%;
     height: 300px; /* Adjust as needed */
-    background-image: url(images/our-service.jpg); /* Replace with your banner image */
+    background-image: url('images/our-service.jpg'); /* Replace with your banner image */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -899,7 +886,7 @@ header {
 .contactus-banner {
     display: flex; 
     justify-content: flex-start; 
-    background-image: url(images/call.png);
+    background-image: url('/images/call.png');
     background-repeat: no-repeat; 
     background-size: cover; 
     padding: 40px; 
