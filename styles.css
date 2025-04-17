@@ -99,7 +99,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(/images/cubes.jpg) no-repeat center/cover;
+    background: url(images/cubes.jpg) no-repeat center/cover;
     opacity: 0.5; /* Adjust transparency (0.1 to 1) */
     z-index: -1; /* Keeps it behind content */
 }
@@ -709,7 +709,7 @@ header {
     position: relative;
     width: 100%;
     height: 300px; /* Adjust as needed */
-    background-image: url('images/our-service.jpg'); /* Replace with your banner image */
+    background-image: url(images/our-service.jpg); /* Replace with your banner image */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -886,7 +886,7 @@ header {
 .contactus-banner {
     display: flex; 
     justify-content: flex-start; 
-    background-image: url('/images/call.png');
+    background-image: url(images/call.png);
     background-repeat: no-repeat; 
     background-size: cover; 
     padding: 40px; 
