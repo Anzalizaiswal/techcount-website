@@ -196,14 +196,13 @@ header {
     flex: 1;
     max-width: 50%;
     margin-left: -5%;
-    
-    
 }
 
 .about-content p {
     font-size: 20px;
     color: #555;
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* Right Side - Image */
@@ -238,7 +237,7 @@ header {
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
-        text-align: center;
+        text-align: justify;
     }
     .about-content, .about-image {
         max-width: 100%;
@@ -298,7 +297,10 @@ header {
 
 }
 
-
+.service-container h2{
+    font-size: 44px;
+  
+}
 .service-item {
     background: white;
     padding: 20px;
@@ -308,7 +310,7 @@ header {
 
 .service-item h3 {
     color: #0A3476;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: lighter;
     margin-bottom: 10px;
 }
@@ -317,9 +319,9 @@ header {
     color: #555;
     font-size: 18px;
     line-height: 1.6;
+
 }
 
-/* View All Services Button */
 
 
 /*why choose us*/
@@ -623,46 +625,45 @@ header {
 }
 
 
-/* aboutt Grid Section */
+/* aboutt Grid Section - Responsive - Image First (Mobile) */
 .aboutt-grid-side {
-    padding: 80px 10% 60px; /* Adjust padding as needed */
+    padding: 80px 5%;
 }
 
 .aboutt-row {
     display: flex;
+    flex-direction: column; /* Stack items on smaller screens */
     align-items: center;
-    margin-bottom: 100px; /* Spacing between service rows */
+    margin-bottom: 60px;
 }
 
 .aboutt-row.reverse {
-    flex-direction: row-reverse; /* Image on the left for reversed rows */
+    flex-direction: column; /* Ensure consistent stacking on mobile */
 }
 
 .aboutt-img {
-    flex: 1; /* Take equal width */
-    margin-right: 50px; /* Adjust for the gap */
-    border-radius: 10px; /* Optional: Rounded corners for images */
-    overflow: hidden; /* Clip any overflowing content (for border-radius) */
-}
-
-.aboutt-row.reverse .aboutt-img {
-    margin-left: 50px; /* Adjust for the gap */
+    flex: 1;
     margin-right: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px; /* Spacing between image and text */
+    order: -1; /* Make image appear first */
 }
 
 .aboutt-text {
-    flex: 1; /* Take equal width */
+    flex: 1;
+    text-align: left;
 }
 
 .aboutt-text h2 {
-    font-size: 2.5rem;
-    color: #0A3476; /* Your theme blue */
-    margin-bottom: 18px;
-   
+    font-size: 2rem;
+    color: #0A3476;
+    margin-bottom: 15px;
 }
 
 .aboutt-text p {
-    font-size: 18px;
+    font-size: 1rem;
     color: #555;
     line-height: 1.6;
     text-align: justify;
@@ -672,35 +673,65 @@ header {
     display: block;
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease-in-out; /* Optional: Image hover effect */
+    transition: transform 0.3s ease-in-out;
 }
 
 .aboutt-img img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/* Add margin to the last aboutt-row */
 .aboutt-grid-side .aboutt-row:last-child {
     margin-bottom: 40px;
 }
 
-@media (max-width: 768px) {
-    .aboutt-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
+/* Media Query for larger screens (tablets and desktops) */
+@media (min-width: 769px) {
+    .aboutt-row {
+        flex-direction: row;
+        align-items: center;
     }
-    .aboutt-image img {
-        max-width: 90%;
+
+    .aboutt-row.reverse {
+        flex-direction: row-reverse; /* Reverse order for alternating rows */
     }
-    .aboutt-heading {
-        font-size: 2.7rem;
+
+    .aboutt-img {
+        margin-right: 50px;
+        margin-bottom: 0;
+        order: 0; /* Revert to HTML order */
     }
+
+    .aboutt-row.reverse .aboutt-img {
+        margin-left: 50px;
+        margin-right: 0;
+        order: 0; /* Revert to HTML order */
+    }
+
     .aboutt-text {
-        font-size: 1.05rem;
+        text-align: left;
+    }
+
+    .aboutt-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .aboutt-text p {
+        font-size: 18px;
+        text-align: justify;
+
     }
 }
 
+/* Media Query for smaller tablets */
+@media (max-width: 992px) {
+    .aboutt-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .aboutt-text p {
+        font-size: 1rem;
+    }
+}
 
 /* service.html*/
 
@@ -824,6 +855,7 @@ header {
     color: #333;
     line-height: 1.7;
     margin-bottom: 0;
+    text-align: justify;
 }
 
 .tailored-service-image-container {
@@ -1057,6 +1089,7 @@ ul li a:hover {
     }
     
     .nav-container.active {
+        max-width: 130px;
         right: 0;
     }
     
