@@ -1014,22 +1014,56 @@ ul li a:hover {
     color: #0A3476; /* Primary color on hover */
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center items */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
     }
 
     .footer-left, .footer-middle, .footer-right {
-        text-align: center; /* Center text */
-        width: 100%; /* Full width on small screens */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .footer-logo {
-        height: 50px; /* Slightly smaller logo */
+        height: 50px;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .left-footer p {
+        margin: 5px 0;
+    }
+
+    .footer-middle ul,
+    .footer-right ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto; /* Center the list */
+        text-align: center; /* Center the text inside list */
+    }
+
+    .footer-middle ul li,
+    .footer-right ul li {
+        margin: 5px 0;
+    }
+
+    .footer-middle ul li a,
+    .footer-right ul li {
+        font-size: 14px;
+        display: inline-block; /* Make items behave like centered blocks */
+    }
+
+    .copyright-section {
+        text-align: center;
+        padding: 10px;
     }
 }
+
+
 /* copyright section */
 .copyright-section {
     background-color: #1a1a1a; /* Dark background */
