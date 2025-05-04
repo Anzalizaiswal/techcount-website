@@ -143,7 +143,10 @@ header {
 /* Responsive Design */
 @media (max-width: 768px) {
     .home-banner {
+        display: flex; /* Add this */
         flex-direction: column;
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
         text-align: center;
         padding: 30px 5%;
     }
