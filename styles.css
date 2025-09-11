@@ -79,29 +79,19 @@ header {
 .nav-items li a:hover {
     color: #3F853F;
 }
-/* Home Banner Section */
+
+/* Home Section */
 .home-banner {
     position: relative;
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 20px 10%;
-    overflow: hidden;
+    min-height: 100vh;
+    width:100vw;
+    margin: 30px;
 }
 
-/* Background Video */
-.home-banner .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-
-/* Dark Transparent Overlay */
 .home-banner::after {
     content: "";
     position: absolute;
@@ -109,42 +99,46 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.45); /* adjust transparency (0.3 lighter → 0.6 darker) */
-    z-index: -1;
+    background: url(images/cubes.jpg) no-repeat center/cover;
+    opacity: 0.5; /* Adjust transparency (0.1 to 1) */
+    z-index: -1; /* Keeps it behind content */
 }
 
-/* Home Content */
+
+
 .home-content {
-    position: relative;
-    color: #fff;
-    max-width: 650px;
-    z-index: 1;
+    max-width: 600px; /* Set a limit for content width */
+    text-align: left;
+    margin-left: -5%;
 }
 
 .home-content h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    font-size: 60px;
+    color: #0A3476;
+    font-weight: bolder;
 }
 
 .home-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 20px;
+    color: #555;
+    margin-top: 15px;
 }
 
-.home-content .btn {
+.btn {
     display: inline-block;
-    padding: 12px 30px;
-    background-color: #0A3476; /* dark blue */
-    color: #fff;
-    border-radius: 30px;
-    font-size: 1rem;
+    background-color: #3F853F;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 6px;
     transition: background 0.3s ease;
 }
 
-.home-content .btn:hover {
-    background-color: #3F853F; /* green */
+.btn:hover {
+    background-color: #0A3476
 }
+
 
 
 
@@ -1301,4 +1295,5 @@ ul li a:hover {
         font-size: 2rem;
     }
 }
+
 
